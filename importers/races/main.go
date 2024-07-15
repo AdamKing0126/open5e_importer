@@ -17,10 +17,7 @@ import (
 func main() {
 	nextUrl := "https://api.open5e.com/v1/races/"
 
-	// This command should be run from the root directory of the project, so
-	// the relative path for the database file will be from root, not relative
-	// to this file.
-	db, err := sqlx.Open("sqlite3", "./sql_database/race_imports.db")
+	db, err := sqlx.Open("sqlite3", "../mud/sql_database/race_imports.db")
 	if err != nil {
 		log.Fatalf("Failed to open SQLite database: %v", err)
 	} else {

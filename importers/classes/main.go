@@ -16,7 +16,7 @@ import (
 func main() {
 	nextUrl := "https://api.open5e.com/v1/classes/"
 
-	db, err := sqlx.Open("sqlite3", "./sql_database/class_imports.db")
+	db, err := sqlx.Open("sqlite3", "../mud/sql_database/class_imports.db")
 	if err != nil {
 		log.Fatalf("Failed to open SQLite database: %v", err)
 	} else {
